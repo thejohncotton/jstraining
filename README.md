@@ -94,11 +94,164 @@ unix systems.
 ---
 ## Essential HTML
 
+Let's update our site structure so that in our environment directory we have an
+index.html file, and a `css/style.css` and corresponding `js/script.js` files 
+and directories.
+
+Our structure should now contain:
+```
+index.html
+/css/style.css
+/js/script.js
+
+```
+
+Lets create the HTML document.
+
+Many modern editors natively submit [*emmet*](https://emmet.io/) shortcuts.
+
+We can initialize our `index.html` file by creating boilerplate with emmet.
+In index.html, type `!` and press `tab`.
+
+This will result in the following generated HTML:
+``` 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+### Hello HTML
+HTML is a markup language that uses tags for elements.
+
+Lets start small and add a heading to our index.html page.
+Between the opening and closing `body` tags write the following:
+`<h1>Hello World</h1>`
+
+
+### Adding style and functionality
+In script.js add the following line:
+`console.log("hello, world");`
+
+In style.css add the following css rule:
+
+``` 
+h1 {
+    color: red;
+} 
+
+```
+
+### Connecting the document to css and js
+
+Connecting CSS:
+The tag for linking your style sheet in HTML is `<link>`
+**notice** this tag is self closing and does not need to be closed. i.e `</>`
+
+HTML tags contain attributes. i.e. href in ```<a href="http://example.com">This is a link</a>```
+
+or src in ```<img src="https://images.pexels.com/photos/20787/pexels-photo.jpg">```
+
+which will yield: ![](https://images.pexels.com/photos/20787/pexels-photo.jpg)
+
+Code for linking CSS:
+`<link src="css/style.css" rel="stylesheet">`
+
+Code for linking JS used the script tag:
+
+`<script href="js/script.js"></script>`
+
 ---
 
 ## Essential Git
 
+Initializing a git repository:
+
+`git init`
+
+This begins tracking your changes.
+To check on the status of your repository you can use the 
+`git status` command.
+
+Right now we have a repository that isn't tracking changes.
+
+To stage a single file (or everything) we can use the `git add` command.
+
+Example: `git add file.ext`
+
+We can add all files in our working directory by typing `git add .`
+
+Now that we are tracking changes we can check our status again.
+
+`git status`
+
+Git histories are grouped into pieces of meaningful changes called commits.
+
+For instance: `git commit -m "initialize repository"`
+or `git commit -m "resize paragraph text"`
+
+where `-m` is your commit mesage.
+
+let's create our initial commit:
+`git commit -m "initialize repo"`
+
+Now check the status once more:
+
+`git status`
+
+We have now successully initialized a repository and commited come code.
+
+There is one more step to successfully securing our code.
+
+## Setting up a remote
+
+This is where Github comes into play. Github allows its users to backup their git
+repositories remotely for free (as long as it's public).
+
+Go to [github](https://github.com) and click the + in the top right corner of the window.
+
+Create a new repository with the same name as your cloud9 project,
+but don't initialize the repo with a readme.md file.
+
+Once created, copy the address of your repository ending in `.git`
+
+To link our local repository with the remote repository we can use the `git remote`
+commands. 
+
+`git remote add origin url-of-remote.git`
+
+Now that we have our remote connected we can push our changes by typing 
+`git push origin master`
 
 ---
+## Deployment
+
+Since we already have a github account, we can now deploy our site using 
+[netlify](https://www.netlify.com).
+
+A continuous deployment platform that triggers deploys based on git commits.
+
+Click the 'New Site From Git' button, and link to your github repository.
+
+Now you can deploy your site and also give it a custom url.
+
+
+---
+## Exercises
+
+1. Add more content to your site in index.html
+i.e. paragraphs, links, images and more.
+2. Add a function to your js file.
+3. Add more css rules to style.css
 
 ## JS in a REPL
+
+To open up a JS REPL from the CLI you can use the 
+`node` command.
