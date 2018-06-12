@@ -269,6 +269,14 @@ i.e. paragraphs, links, images and more.
 2. Add a function to your js file.
 3. Add more css rules to style.css
 
+Common git commands:
+
+`git add . `
+
+`git commit -m "commit message"`
+
+`git push origin master` or shortform `git push`
+
 ## JS in a REPL
 
 To open up a JS REPL from the CLI you can use the 
