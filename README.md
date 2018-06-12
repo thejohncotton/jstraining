@@ -232,20 +232,20 @@ Now that we have our remote connected we can push our changes by typing
 
 Now refresh github and see your files update.
 
----
-### gitignore
+<!------->
+<!--### gitignore-->
 
-We don't always want to track everything (like secret keys or environment specific
-folder). With cloud9 we have a hidden directory called `.c9`
-You'll notice this in your repo, but it's hidden in the directory on cloud9.
-To see this in c9 type `ls -a` in the CLI.
+<!--We don't always want to track everything (like secret keys or environment specific-->
+<!--folder). With cloud9 we have a hidden directory called `.c9`-->
+<!--You'll notice this in your repo, but it's hidden in the directory on cloud9.-->
+<!--To see this in c9 type `ls -a` in the CLI.-->
 
-We can simply create an ignore file called gitignore by typing `touch gitignore`
-and adding the following to ignore this directory.
+<!--We can simply create an ignore file called gitignore by typing `touch gitignore`-->
+<!--and adding the following to ignore this directory.-->
 
-`/.c9`
+<!--`/.c9`-->
 
-Which will tell git not to track this folder.
+<!--Which will tell git not to track this folder.-->
 
 
 ---
