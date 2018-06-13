@@ -15,7 +15,7 @@ Internet Explorer so we'll be using Chrome from here on out.**
 Navigate to [css zen garden](https://csszengarden.com)
 
 You can view the page's source code by typing the following:
-`ctrl` + `shift` + `i` for windows or `cmd` + `opt` + `i` for mac.
+`ctrl` + `shift` + `u` for windows or `cmd` + `opt` + `u` for mac.
 
 or in the Chrome navigation bar, select:
 
