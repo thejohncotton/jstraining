@@ -1,0 +1,1 @@
+{"filter":false,"title":"[P] /session-2.md","undoManager":{"mark":-1,"position":-1,"stack":[]},"preview":{"path":"/session-2.md","previewer":"preview.markdown"},"timestamp":1528853901940,"hash":"da39a3ee5e6b4b0d3255bfef95601890afd80709"}
