@@ -1,6 +1,9 @@
 ---
 # Essential Tools
 ---
+<!-- Make a quick cat portfolio website to learn HTML
+CSS (later JS)-->
+
 Now that we have seen how front-end technologies work together to make a website
 i.e.
 `html` as a document framework, `css` for styles, and `JavaScript` for logic and
@@ -97,4 +100,17 @@ Iteration.
 
 ## JQuery
 a [jquery sandbox](https://jquerysandbox.netlify.com/)
+
+In a file:
+In your index.html file, in a `<script>` tag in the <head> of the document,
+link the 
+[jquery](https://code.jquery.com/) library.
 <!-- connect savvy jquery commands -->
+You can now use jquery in your site.
+
+
+## Exercises
+
+1. Add some classes and ids to your index.html file
+2. Using jQuery, interace and manipulate the document.
+3. Using vanilla JavaScript, manipulate the document the same way.
