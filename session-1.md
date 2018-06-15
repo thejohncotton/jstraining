@@ -1,17 +1,18 @@
 ----------------------------------------------------------------- 
 
-# Essential JavaScript
+# Essential JavaScript, CSS and layout
 
 
 ---
 ## let's get started:
 
-1. Connect on [Slack](https://bjcjs.slack.com).
-2. Create developer accounts with [Github](https://www.github.com) and [AWS](https://aws.amazon.com/cloud9/).
-3. Create a new cloud9 project [(read the docs)](https://docs.c9.io/docs/)
+<!-- 1. Connect on [Slack](https://bjcjs.slack.com). -->
+1. Create developer accounts with [Github](https://www.github.com), [AWS](https://aws.amazon.com/cloud9/), and [thimble](https://thimble.mozilla.org)
+.
+2. Create a new cloud9 project [(read the docs)](https://docs.c9.io/docs/)
 ---
 ## Essential Command-Line
-Let's try typing the following in the console:
+Let's try typing the following in the cloud9 terminal:
 
 `echo hello, world.`
 
@@ -21,7 +22,7 @@ Let's try typing the following in the console:
 
 ---
 ### Working with directories
-Try the following in the cloud9 console:
+Try the following in the cloud9 terminal:
 
 `mkdir www`
 
@@ -53,9 +54,8 @@ Try the following in the cloud9 console:
 
 ## Essential Text Editor
 
-Cloud 9 has a built in modern text-editor, but sometimes it makes more sense 
-to edit code from the command-line. (Many developers will argue that Vim or Emacs
-are the only text editors that you should use.)
+Cloud 9 has a built in modern text-editor, but there exists time where we might only be able to edit code from the command-line. (Many developers prefer to use a command-line based editor and will argue that Vim or Emacs
+are the only text editors that you will ever need.)
 
 ## Vim
 Vim is a command-line based text editor that switches has multiple modes and can
@@ -281,3 +281,5 @@ Common git commands:
 
 To open up a JS REPL from the CLI you can use the 
 `node` command.
+You can now type JavaScript directly in the console.
+try `2 + 2` `"2" + "2"`

@@ -4,11 +4,17 @@
 
 ## The form tag
 
+<!-- on index add -->
+`<li><a href="contact.html">Contact</a></li>`
+and 
+
+`<li><a href="contact.html">Contact</a></li>`
+
 Let's add a contact page to our demo site:
 
 On this new page we'll add this form:
 
-```
+```html
  <!--
   The action attribute defines where on the server the form data should be sent
   The method attribute specifies the HTTP method (GET or POST)
