@@ -53,33 +53,75 @@ In css/style.css lets add some rules to our elements:
 
 ```css
 
-img {}
+img {
   width: 50%;
-  border-radius: 100%;
+}
+```
+You should immediately notice a difference if you chose a large image.
+
+What if we want to center our image horizontally?
+
+```css
   margin-left: 25%;
   margin-right: 25%;
-}
 ```
+
+And what about rounding our image into a circle?
+
 ```css
-div.social-footer {
-/*  position: absolute;*/
-  bottom: 10px;
-/*  margin-left: 30%;*/
-/*  margin-right: 30%;*/
-
-}
-div.social-footer li{
-  align-items: center;
-  display: inline;
-  list-style: none;
-
-}
-
+border-radius: 100%;
 ```
+
+
+Let's give our social links some styling.
+First, lets unstack our list by changing the display property:
+
+
+```css
+div.social-footer li {
+  display: inline;
+}
+```
+`div.social-footer li {}` selects `<li>` tags that are nested inside the `<div>` tag, with the class of social-footer.
+
+It still doesn't quite look right, so lets add some more rules:
+```css
+ align-items: center;
+ list-style: none;
+  ```
+
+`align-items` allows the items to be centered in the container. In this case centering the `<li></li>` elements inside the `<ul></ul>`.
+
 ---
 
-# Essential Developer Tools
+## Media Queries and Breakpoints
+
+We can specify a different set of rules for our page depending on the size of the users browser viewport.
+
+It may help to think of this as a style sheet nested inside of a media query.
+--
+
+```css 
+@media screen and (max-width: 600px){
+
+  body {
+    background-color: yellow;
+    text-align: center;
+  }
+  ul{
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 10px;
+  }
+}
+```
+
+`max-width` sets these rules based on a viewport width  <= 600px.
+
 ---
+# Essential Developer Tools
+
 
 Now that we have seen how front-end technologies work together to make a website
 i.e.
@@ -105,7 +147,7 @@ View > Developer > View Source
 Let's read through the HTML Tags top to bottom.
 
 Note the way an HTML document is nested:
-```
+```html
 <html>
     <head>
        <!-- metadata -->
@@ -135,6 +177,8 @@ console and `network` provides tools for tracking incoming and outgoing data.
 
 Click on a section in Elements, and open the styles tab in the inspector.
 
+---
+
 ## The Developer Console
 
 To open press `ctrl` + `shift` + `j` for windows or `cmd` + `opt` + `j` for mac.
@@ -151,7 +195,7 @@ Try the following in the console:
 Note the syntax `('selector').style.property = "value"`
 is similar to the css syntax:
 
-```
+```css
 selector {
         property: value;
 }
@@ -159,24 +203,56 @@ selector {
 
 EXAMPLE
 
-```
+```css
 body {
     display: none;
 }
 ```
+---
+# Control Flow and basic functions in JavaScript
 
 
-## More JavaScript
+#### functions and control flow
 
-Arrays.
-Functions.
-Objects.
-Loops.
-Constructor functions.
-Iteration.
+Now we have bits of data stored in memory for us to manipulate, which is nice. But up to now, there's been no way to make our programs adapt to inputs. To do that, we'll need functions and control flow.
+1. The key to control flow are `if`, `else`, and `else if` statements, built on the Boolean data type. These statements allow us to perform a Boolean test, then give different outputs based on the results of that test. Try the following in your console:
 
-## Adding html and css to our hello world website
+  ```javascript
+  if( myCountry === 'USA' ) {
+    console.log('Sweet Land of Liberty');
+  }
+  ```
+  This is a Boolean test that should output a string to the console when `myCountry` is set to `'USA'`. If there's any other value stored to `myCoutry`, then nothing will be output at all.
+2. Let's try to account for every other condition with an `else` clause, like so:
 
+  ```javascript
+  if( myCountry === 'USA' ) {
+    console.log('Sweet Land of Liberty');
+  }
+  else {
+    console.log('Sounds like you need some DEMOCRACY');
+  }
+  ```
+
+  Now something should output each time that block of code is run, since it covers every possible condition!
+3. But this can be a real pain to re-type every time you want to check out your current country. What if we could save this block of code just like we could save chunks of data to variables? Luckily, we can do exactly that by creating a new function! Try this:
+
+  ```javascript
+  var freedomCheck = function(){
+    if( myCountry === 'USA' ) console.log('Sweet Land of Liberty');
+    else console.log('Sounds like you need some DEMOCRACY');
+  };
+  ```
+  Now we have our test available whenever we'd like to call it again, saved just like any other variable. Now try the following, and see what happens:
+
+  ```javascript
+  freedomCheck
+  freedomCheck()
+  ```
+  The first just accesses the data stored in the variable, which includes the whole `function()` phrase. But we really want to *invoke* the function instead, which is what happens when we use the parens after the name of the stored function (e.g. `freedomCheck()`). Now we actually run the code inside of the curly braces instead of just displaying it in the REPL.
+
+
+---
 ## JQuery
 Open 
 this [jquery sandbox](https://jquerysandbox.netlify.com/).
@@ -259,23 +335,6 @@ $("div.toggle-stuff").hide(); // invisible
 $("div.toggle-stuff").show(); // visible
 ```
 
-Now, using the same sandbox page we used for Exercise 1, try the following:
-
-1. Show and hide the `#secret` element with `.show()` and `.hide()` from the console!
-2. `append` a calling card with your name to the end of the page. HINT:
-
-```javascript
-var callingCard = "<div><b>Alex was here</b></div>";
-$("body").append(callingCard);
-```
-
-3. `prepend` a greeting to the beginning of the page's `body`. HINT:
-
-```javascript
-var greeting = "<h1>Welcome to the jQuery SandBox</h1>";
-$("body").prepend(greeting);
-```
-
 ---
 
 ### Exercise 3
@@ -294,12 +353,8 @@ $('#change-me').animate("font-size", "200%") // animate a CSS property of your c
 
 ---
 
-
-
-
-
-In a file:
-In your index.html file, in a `<script>` tag in the <head> of the document,
+## JQuery in a file:
+In your index.html file, in a `<script>` tag in the `<head>` of the document,
 link the 
 [jquery](https://code.jquery.com/) library.
 <!-- connect savvy jquery commands -->

@@ -7,8 +7,8 @@
 ## let's get started:
 
 <!-- 1. Connect on [Slack](https://bjcjs.slack.com). -->
-1. Create developer accounts with [Github](https://www.github.com), [AWS](https://aws.amazon.com/cloud9/), and [thimble](https://thimble.mozilla.org)
-.
+1. Create developer accounts with [Github](https://www.github.com), [AWS](https://aws.amazon.com/cloud9/), and [thimble.](https://thimble.mozilla.org)
+
 2. Create a new cloud9 project [(read the docs)](https://docs.c9.io/docs/)
 ---
 ## Essential Command-Line
@@ -58,7 +58,7 @@ Cloud 9 has a built in modern text-editor, but there exists time where we might 
 are the only text editors that you will ever need.)
 
 ## Vim
-Vim is a command-line based text editor that switches has multiple modes and can
+Vim is a command-line based text editor that has multiple modes and can
 support many commands for keyboard/terminal speed.
 
 Try the following command in your terminal: `vim hello.txt`
@@ -114,7 +114,7 @@ We can initialize our `index.html` file by creating boilerplate with emmet.
 In index.html, type `!` and press `tab`.
 
 This will result in the following generated HTML:
-``` 
+```html 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -142,11 +142,10 @@ In script.js add the following line:
 
 In style.css add the following css rule:
 
-``` 
+```css 
 h1 {
     color: red;
 } 
-
 ```
 
 ### Connecting the document to css and js
@@ -162,6 +161,7 @@ or src in ```<img src="https://images.pexels.com/photos/20787/pexels-photo.jpg">
 which will yield: ![](https://images.pexels.com/photos/20787/pexels-photo.jpg)
 
 Code for linking CSS:
+
 `<link src="css/style.css" rel="stylesheet">`
 
 Code for linking JS used the script tag:
@@ -256,7 +256,7 @@ Since we already have a github account, we can now deploy our site using
 
 A continuous deployment platform that triggers deploys based on git commits.
 
-Click the 'New Site From Git' button, and link to your github repository.
+Click the `New Site From Git` button, and link to your github repository.
 
 Now you can deploy your site and also give it a custom url.
 
@@ -282,4 +282,64 @@ Common git commands:
 To open up a JS REPL from the CLI you can use the 
 `node` command.
 You can now type JavaScript directly in the console.
-try `2 + 2` `"2" + "2"`
+try
+
+ `2 + 2` // + is the addition operator
+  
+`"2" + "2"` // + is the concatenation operator
+
+## Primitive data
+There are 7 types of primitive data in the latest JavaScript standard. More of the details on that [here.](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+
+
+We only need a few for the purpose of this training.
+
+1. Number: i.e. `1`, `2`, `3`, `4.1222234`, `3.14`
+2. String: a set of text i.e. `"a"`, or `"This is a string"`
+3. boolean: a value that is either true, or false. i.e. `true`
+    
+
+
+## Variables
+
+Think of a variable as a box with a name. We can store any value in this box.
+
+Type the following in your console:
+
+`var wordBox = "hello"`
+
+Now whenever we use the variable name
+`wordBox` we get the value stored in the box.
+
+Let's try that again for `numberBox`
+
+`var numberBox = 27`
+
+Now we can access the number stored in this variable by using `numberBox`
+
+Let's also make a variable for a boolean value.
+
+`var isTrue = true`
+
+And we can once more access this value by using the name of the variable.
+
+`isTrue`
+
+We can manipulate, evaluate , and combine variables.
+
+For instance we can change the value stored in wordBox to be: `My age is ` simply by typing:
+
+`wordBox = "My age is "`
+
+We can change the value of `numberBox` to our age in the same manner.
+
+`numberBox = 37`
+
+And we can combine these in a console log message as so:
+
+```js
+console.log(wordBox + numberBox)
+```
+
+---
+
